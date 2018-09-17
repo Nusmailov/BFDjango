@@ -1,0 +1,12 @@
+import functools
+import math
+cnt = 0
+sum = 0
+n = int(input())
+for i in range (0,n):
+    x = int(input())
+    sum += x
+print(sum)
+ 
+#c = str(a)[::-1]
+ 
