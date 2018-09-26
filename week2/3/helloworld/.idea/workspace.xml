@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88dfc9c1-6676-455a-a45b-a4b559ac75ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../mysite/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/.idea/mysite.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mysite/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/mysite/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/mysite/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/mysite/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/mysite/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/polls/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/polls/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/polls/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/polls/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/polls/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/polls/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/polls/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../mysite/polls/views.py" beforeDir="false" />
-    </list>
+    <list default="true" id="88dfc9c1-6676-455a-a45b-a4b559ac75ca" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +12,7 @@
     <session id="-1385888382">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
