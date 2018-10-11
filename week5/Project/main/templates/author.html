@@ -1,0 +1,29 @@
+{%extends "base.html"%}
+
+{% block body %}
+
+    <h3>Author</h3>
+    <h1>Books List</h1>
+
+    <a href="{% url 'author_new' %}" class="btn btn-primary" style="size:15px 10px">Add new</a>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+        </tr>
+
+        {%for author in authors%}
+            <tr>
+                <td><a href="">{{author.name}}</a></td>
+                <td>{{author.surname}}</td>
+                <td>{{author.email}}</td>
+                <td>
+                    <a href="{% url delete_author%}" class="btn btn-warning">Delete</a>
+                </td>
+            </tr>
+        {%endfor%}
+    </table>
+
+{%endblock%}
