@@ -14,7 +14,20 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">BFDjango TODO</nav>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">BFDjango TODO</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Book</a></li>
+              <li><a href="#">Author</a></li>
+              <li><a href="#">Publisher</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <br>
     <div class="row">
         <div class="col-md-2"></div>
@@ -23,7 +36,6 @@
 
                 {%block body%}
                 {%endblock%}
-
                 <p>
                         <button class="btn btn-warning">View completed tasks</button>
                         <button class="btn btn-danger">Delete this task</button>
