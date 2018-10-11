@@ -36,11 +36,12 @@ def author_new(request):
     }
     return render(request, 'author/new.html', context)
 
-def delete_author(request, id):
-    try:
-        curAuthor = Author.objects.get(pk=id)
-        curAuthor.delete()
-    except Author.DoesNotExist:
-        raise Http404("Author not found")
+def delete_author(request, author_id):
+    Author.objects.get(pk=author_id).delete()
+    tasks = Author.objects.all()
+    context = {
+        'tasks': tasks
+    }
+    return redirect('author')
 
 # Create your views here.

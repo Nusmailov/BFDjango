@@ -12,6 +12,7 @@
             <th>Name</th>
             <th>Surname</th>
             <th>Email</th>
+            <th>Deleting</th>
         </tr>
 
         {%for author in authors%}
@@ -20,7 +21,7 @@
                 <td>{{author.surname}}</td>
                 <td>{{author.email}}</td>
                 <td>
-                    <a href="{% url delete_author%}" class="btn btn-warning">Delete</a>
+                   <a href="{%url 'delete_author' author.id%}" class="btn btn-warning">Delete</a>
                 </td>
             </tr>
         {%endfor%}
