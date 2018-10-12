@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+
+{% block body %}
+
+    <h3>Books</h3>
+    <h1>Books List</h1>
+    <table class="table">
+    <tr>
+        <th>Task</th>
+        <th>Created</th>
+        <th>Due on</th>
+        <th>Owner</th>
+        <th>Mark</th>
+    </tr>
+    </table>
+    {% for task in books %}
+        <tr>
+            <td><a href="">{{book.title}}</a></td>
+            <td>{{book.created}}</td>
+            <td>{{book.due_on}}</td>
+            <td>{{book.owner}}</td>
+            <td><button class="btn btn-info">
+            {% if book.mark %}
+                Done
+            {% else %}
+                Not Done
+            {% endif %}
+            </button></td>
+        </tr>
+    {% endfor %}
+{%endblock%}
