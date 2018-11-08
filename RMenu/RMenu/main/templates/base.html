@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Restaurant
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap1.css'%}">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">
+                        RestaurantSite
+                    </a>
+
+                </div>
+                <ul class="nav navbar-nav">
+                  <li class=""><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'restaurants' %}">Restaurants</a></li>
+                  <li><a href="{% url 'dishes' %}">Dish</a></li>
+                  <li><a href="">Review</a></li>
+                  <li><a href="">RestaurantReview</a></li>
+                  <li><a href="">DishReview</a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                    <li><a href="{%url 'logout'%}">Logout</a></li>
+                {% else %}
+                    <li><a href="{%url 'login'%}">Login</a></li>
+                    <li><a href="{%url 'register'%}">Register</a></li>
+                {% endif %}
+            </ul>
+            </div>
+
+        </nav>
+    {% block body%}
+
+
+    {% endblock %}
+    </body>
+
+</html>

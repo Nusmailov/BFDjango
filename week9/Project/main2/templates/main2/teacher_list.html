@@ -1,0 +1,17 @@
+{%extends 'base.html' %}
+
+{% block body%}
+
+    <a class="btn btn-primary" href="{%%}"> Add new Teacher</a>
+
+    <h1>Teacher List </h1>
+
+    <ul class="list-group">
+        {% for teacher in teachers %}
+            <li class="list-group-item">
+                <div>
+                    <h4><a href="{%%}">{{teacher.name}}</a> </h4>
+
+                </div>
+            </li>
+    </ul>
