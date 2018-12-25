@@ -1,11 +1,6 @@
 from django.db import models
 
 
-class Location(models.Model):
-    street = models.CharField(max_length=100)
-    block = models.IntegerField()
-
-
 class City(models.Model):
     name = models.CharField(max_length=100)
 
@@ -15,19 +10,10 @@ class City(models.Model):
 
 class Shop(models.Model):
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
+    description = models.CharField(max_length=1000)
+    image = models.ImageField( blank= True, null=True)
     phone = models.CharField(max_length=11)
     city = models.ForeignKey(City, on_delete=models.CASCADE, default='')
-
-    def __str__(self):
-        return self.name
-
-
-class Flower(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
-    price = models.IntegerField(default=200)
-    Shop = models.ForeignKey(Shop, on_delete=models.CASCADE, blank=True, default='')
 
     def __str__(self):
         return self.name
@@ -39,20 +25,33 @@ class Customer(models.Model):
     age = models.IntegerField()
     phone = models.CharField(max_length=11)
     email = models.EmailField()
+    shop = models.ForeignKey(Shop, on_delete=models.CASCADE, null=True, blank=True)
     city = models.ForeignKey(City, on_delete=models.CASCADE, blank=True)
+
+
+class Flower(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=100)
+    image = models.ImageField(blank=True, null=True)
 
     def __str__(self):
         return self.name
 
 
-class Basket(models.Model):
-    flowers = models.ForeignKey(Shop, on_delete=models.CASCADE, blank=True)
-    sum = models.ForeignKey(Flower, on_delete=models.CASCADE, blank=True)
-
-
 class ShopFlower(models.Model):
     shop_id = models.ForeignKey(Shop, on_delete=models.CASCADE)
     flower_id = models.ForeignKey(Flower, on_delete=models.CASCADE)
+    price = models.IntegerField()
 
-    def __str__(self):
-        return self.id
+
+class Order(models.Model):
+    date = models.DateTimeField()
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, default="")
+    shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
+    sum = models.IntegerField()
+
+
+class OrderFlower(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    flower = models.ForeignKey(Flower, on_delete=models.CASCADE)
+    count = models.IntegerField()

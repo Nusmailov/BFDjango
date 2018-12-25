@@ -1,0 +1,47 @@
+{%extends "base.html"%}
+
+{% block body %}
+    <div class="section1">
+        <div class="wrapper">
+            <span id="typed-strings">
+                <p>Delivery of <strong>Flowers</strong> to desk or to person.</p>
+                <p>We're obsessed<em> with providing a </em> a terrific experience. </p>
+                <p>Ohhhh yeah!</p>
+            </span>
+            <span id="typed"></span>
+        </div>
+    </div>
+
+
+    <div class="" style="">
+        <div class="wrapper">
+            {%for shop in shops%}
+                <div class="sect2-item">
+                        <a  href="#"><img src="../../images/{{shop.image}}" width="200"> </a>
+                        <a href="#">
+                            <div class="sect2-right">
+                                <div class="sect2-info">
+                                    <h2 class="price" style="width:30%;">
+                                        {{shop.phone}}
+                                    </h2>
+                                   <div style="width:70%;">
+                                       <h1>{{shop.name}}</h1>
+                                        <p class="desc" >
+                                        {{shop.description}}
+                                    </p>
+                                         <button class="sect2-item-button" >
+                                        <span>
+                                            Flowers
+                                        </span>
+                                </button>
+                                   </div>
+                                </div>
+
+                            </div>
+                        </a>
+                </div>
+            {%endfor%}
+        </div>
+    </div>
+
+{%endblock%}

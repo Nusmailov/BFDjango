@@ -1,0 +1,236 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Robotics'
+}
+header{
+	height: 80px;
+	width: 100%;
+	box-sizing: border-box;
+	position: fixed;
+	padding: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background: rgba(0,0,0,0.8);
+	display: flex;
+	justify-content: space-between;
+
+}
+.section1 h1{
+	margin-top: 0px;
+	vertical-align: middle;
+	font-size: 60px;
+	font-weight: 900;
+	color: white;
+}
+.headerlogo{
+	text-align: left;
+}
+.headerlogo>img{
+	width: 100px;
+	margin-top: -30px;
+}
+.headermenu{
+	text-align: center;
+	margin: auto;
+	align-items: center;
+	align-content: center;
+	align-self: stretch;
+}
+.headerauth{
+	text-align: center;
+	float: right;
+
+}
+.headerauth,.headerlogo,.headermenu{
+	vertical-align: middle;
+	display: inline-block;
+}
+.headerul>li{
+	font-size: 18px;
+	color:white;
+	font-family: 'Circe';
+	text-decoration: none;
+	padding-right:  15px;
+	vertical-align: middle;
+	box-sizing: content-box;
+	transition: 0.5s;
+	display: flex;
+}
+.headerul>li:hover{
+	color: #823f78;
+}
+.headerul{
+	display: flex;
+
+}
+.Login>a{
+	text-decoration: none;
+	color: white;
+	font-size: 22px;
+	font-weight: 700;
+	cursor: pointer;
+}
+.logout>a{
+	color: white;
+	text-decoration: none;
+	font-size:  20px;
+	font-weight: 400;
+	cursor: pointer;
+	margin-left: 20px;
+}
+.section1{
+	background: url(../images/sect1-bg.jpg) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+	text-align: center;
+	padding-top: 20%;
+}
+
+.wrapper{
+	margin: auto;
+	/*margin-right: auto;*/
+	max-width: 1000px;
+}
+.sect2-item{
+	display: flex;
+	text-align: center;
+	margin-bottom: 10px;
+	align-items: center;
+}
+.sect2-item img{
+	border-radius: 20px;
+	margin-right: 20px;
+	width: 200px;
+	transition: 0.5s;
+}
+.sect2-item img:hover{
+	width: 250px;
+
+}
+.sect2-info{
+	display: flex;
+	justify-content: space-around;
+	text-decoration: none !important;
+	color: white !important;
+}
+.desc{
+	flex: 0 0 80%;
+	font-size: 20px;
+	text-decoration: none;
+	color: white !important;
+}
+
+.sect2-right{
+	border: solid 2px #14e823;
+	box-sizing: border-box;
+	border-radius: 20px;
+	padding: 10px 0;
+	width:800px;
+}
+.sect2-right h1{
+	color: #14e823;
+	font-size: 25px;
+}
+
+.btn1{
+	border-right: 0!important;
+	border-radius: 20px 0 0 20px;
+	margin-right: -5px;
+}
+.btn3{
+	margin-left: -5px;
+	border-left: 0!important;
+	border-radius: 0 20px 20px 0;
+
+}
+.btn1,.btn2,.btn3{
+	display: inline;
+		font-size: 20px;
+	letter-spacing: 0.5px;
+	padding: 18px 70px;
+	border: solid  black 3px;
+
+	text-transform: uppercase;
+}
+.section2_buttons_container{
+	margin: 30px;
+	text-align: center;
+}
+
+.sect2>.wrapper{
+	text-align: center;
+}
+button{
+	border-style: none;
+	background: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+.sect2-item-button{
+	font-size: 30px;
+	font-weight: 900;
+	border: solid 2px #14e823;
+	border-radius: 20px;
+	padding: 0px 40px;
+	transition: 0.5s;
+	color: #14e823;
+}
+.sect2-item-button:hover{
+
+	padding: 10px 50px;
+	border-radius: 30px;
+	color: #ed0b75;
+}
+.sect2{
+	background: linear-gradient(-45deg,#108,#a36) no-repeat ;
+	background-size: contain;
+    margin:-50px;
+    padding-top:   15px;
+}
+.sect2-item a{
+	text-decoration: none;
+}
+
+
+.sect10{
+	background: url(../images/login-bg.jpg);
+	box-sizing: border-box;
+	height: 720px;
+	padding: 10%;
+	text-align: center;
+	margin: 0 auto;
+}
+.sect10-forms{
+	margin-right: auto;
+	padding: 50px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.sect10-forms strong{
+	color:#14e823;
+}
+
+.sect10-forms input{
+	border: 1px grey solid;
+	border-radius: 40px;
+	height: 60px;
+	width: 450px;
+	padding-left:  20px;
+	margin-bottom: 20px;
+}
+
+.sect10-forms button{
+	border: 1px grey solid;
+	color: white;
+	background: #14e823;
+	border-radius: 30px;
+	height: 60px;
+	width: 250px;
+	font-weight: 900;
+	text-align: center;
+	margin: 10px;
+}

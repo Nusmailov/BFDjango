@@ -1,0 +1,45 @@
+{%extends "base.html"%}
+
+{% block body %}
+
+    <body>
+    <!--<a href="{% url 'flower' %}" class="btn btn-primary" style="size:15px 10px">Add new</a>-->
+        <div class="section1">
+            <div class="wrapper">
+                <span id="typed-strings">
+                    <p>Delivery of <strong>Flowers</strong> to desk or to person.</p>
+                    <p>We're obsessed<em> with providing a </em> a terrific experience. </p>
+                    <p>Ohhhh yeah!</p>
+                </span>
+                <span id="typed"></span>
+            </div>
+        </div>
+
+        <div class="" style="">
+            <div class="wrapper">
+                {%for city in cities%}
+                <div class="sect2-item">
+                    <a href="#">
+                        <div class="sect2-right">
+                            <h1>{{city.name}}</h1>
+                            <div class="sect2-info">
+                                <h2 class="price">
+                                </h2>
+                                <p class="desc">
+                                    {{flower.description}}
+                                </p>
+                            </div>
+                            <button class="sect2-item-button" >
+                                    <span>
+                                        Select
+                                    </span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </body>
+
+{%endblock%}

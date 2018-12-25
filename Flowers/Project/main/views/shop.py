@@ -1,9 +1,17 @@
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from main.serializers import *
+from main.serializers import ShopModelSerializer
+from main.models import Shop
+from django.shortcuts import render, redirect
 
-from main.models import *
+
+def base(request):
+    return render(request, 'base.html')
+
+
+def regg(request):
+    return render(request, 'regg.html')
 
 
 @api_view(['GET', 'POST'])
@@ -11,7 +19,10 @@ def shop_list(request):
     if request.method == 'GET':
         shops = Shop.objects.all()
         serializer = ShopModelSerializer(shops, many=True)
-        return Response(serializer.data)
+        context = {
+            'shops': shops
+        }
+        return render(request, 'shop.html', context)
 
     elif request.method == 'POST':
         serializer = ShopModelSerializer(data=request.data)

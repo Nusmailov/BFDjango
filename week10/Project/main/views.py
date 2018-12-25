@@ -6,11 +6,12 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.contrib.auth.decorators import login_required
 
 
-def home(request):
-    return render(request, 'home.html')
+
 
 def base(request):
     return render(request, 'base.html')
+
+
 @login_required
 def book_list(request):
     books = Book.objects.all()

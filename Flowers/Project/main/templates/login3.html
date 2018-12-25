@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+
+{% block body %}
+    <body style="background: url(images/login-bg.jpg);">
+        <div class="sect10">
+            <div class="sect10-forms">
+                <h1>
+                     <strong>Enter your email and password</strong>
+                </h1>
+                <form action="{% url 'login'%}">
+                     {% csrf_token %}
+                    <input type="text" placeholder="Login" name="username" >
+                    <br>
+                    <input type="password" placeholder="Password" name="password">
+                </form>
+                <form>
+                     <button type="submit">Login</button>
+                </form>
+               <form>
+                   <button>
+                        <span>
+                            <a  href="{% url 'register' %}">
+                                Register
+                            </a>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </body>
+{%endblock%}

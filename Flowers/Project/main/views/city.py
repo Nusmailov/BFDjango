@@ -3,14 +3,18 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from main.serializers import *
 from main.models import *
+from django.shortcuts import render
 
 
-@api_view(['GET',  'PUT'])
+@api_view(['GET', 'PUT'])
 def city_list(request):
     if request.method == 'GET':
         cities = City.objects.all()
         serializer = CityModelSerializer(cities, many=True)
-        return Response(serializer.data)
+        context = {
+            'cities': cities
+        }
+        return render(request, 'cities.html', context)
 
     elif request.method == 'POST':
         serializer = CityModelSerializer(data=request.data)

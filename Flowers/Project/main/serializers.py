@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import *
+from django.contrib.auth.models import User
 
 
 class CustomerModelSerializer(serializers.ModelSerializer):
@@ -9,6 +10,12 @@ class CustomerModelSerializer(serializers.ModelSerializer):
 
 
 class ShopModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Shop
+        fields = "__all__"
+
+
+class ShopFlowerModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Shop
         fields = "__all__"
@@ -26,13 +33,8 @@ class CityModelSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class BasketModelSerializer(serializers.ModelSerializer):
+class UserModelSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Basket
-        fields = "__all__"
+        model = User
+        fields = ("username", "password",)
 
-
-class LocationModelSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Location
-        fields = "_all__"
