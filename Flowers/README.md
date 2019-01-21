@@ -1,7 +1,4 @@
 # Flowers
-Our project about selling flowers. Why did we choose the online shop for  flowers? 
-Because I love flowers, especially white roses.. haha it's just a joking. 
-Okay, the brief description: there is amount of shops in our application, 
-and customer can search appropriate flower by shops, flowers and city. 
-And save that flower in an order. Then order sums up the cost of flowers that he/she bought. 
-That's how our project works! Thank you for your attention :)
+Project about selling flowers. Why did I choose the online shop for  flowers? 
+Okay, the brief description:Flower Shop project is online shop. The main difference of this project, you can select date of delivery, and add postcard to top of Flower. You can select prepared design and text, just by writing girlfriend’s name or realize of design and text of postcard. And add some sweets. Website of backend realized in Django, Python language and  frontend with JavaScript, HTML, CSS.
+
